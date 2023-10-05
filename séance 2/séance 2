@@ -1,0 +1,61 @@
+from math import *
+# 1a
+a,b,c=1,2,3
+
+#print(a,b,c)
+
+a,b,c=b,c,a
+#print(a,b,c)
+
+# 1b
+a,b=3,5
+
+#print("a vaut",a,"et b vaut",b)
+
+#1c
+def f(x):
+    y=2
+    return x**y
+
+#print(f(4))
+
+#1e
+#n=int(input("entrez un entier : "))
+#x=float(input("entrez un flottant : "))
+#print(x**n)
+
+# 2a
+
+#assert 1<0
+
+#ex 3
+
+def est_pair(n):
+    return n%2==0
+
+#assert est_pair(3)
+
+#ex 4
+
+def est_divisible_par_3_ou_5_mais_pas_par_15(n):
+    return (n%3==0 or n%5==0) and n%15!=0
+
+assert est_divisible_par_3_ou_5_mais_pas_par_15(25)
+
+#ex 5
+#a
+def second_degre(a,b,c):
+    D=int((b**2)-(4*a*c))
+    print(D)
+    if D>0:
+        r1=((-b)-sqrt(D))/(2*a)
+        r2=((-b)+sqrt(D))/(2*a)
+        return r1,r2
+    elif D==0:
+        r0=(-b)/(2*a)
+        return r0
+
+
+
+
+print(second_degre(1,0.2,0.01))
